@@ -1,5 +1,8 @@
 FROM jcrist/alpine-conda:4.6.8
 
+ENV CONDA /opt/conda/
+ENV PATH $CONDA:$PYENV:$PATH
+
 ADD spec-file.txt /tools/spec-file.txt
 ADD others-file.txt /tools/others-file.txt
 ADD r-file.txt /tools/r-file.txt
