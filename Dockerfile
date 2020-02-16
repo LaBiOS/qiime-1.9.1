@@ -13,8 +13,8 @@ RUN eval "$(pyenv init -)" \
         numpy==1.16.3 \
         pandas==0.24.2 \
         nomkl \
-    && conda install --yes --freeze-installed --file /tools/spec-file.txt \
-    && conda install --yes --freeze-installed --file /tools/others-file.txt \
-    && conda install --yes --freeze-installed --file /tools/r-file.txt \
-    && conda install --yes --freeze-installed --file /tools/bioconductor-file.txt \
+    && conda install --yes --no-update-deps --file /tools/spec-file.txt \
+    && conda install --yes --no-update-deps --file /tools/others-file.txt \
+    && conda install --yes --no-update-deps --file /tools/r-file.txt \
+    && conda install --yes --no-update-deps --file /tools/bioconductor-file.txt \
     && conda clean -afy
