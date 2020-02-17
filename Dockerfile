@@ -8,7 +8,7 @@ ADD bioconductor-file.txt /tools/bioconductor-file.txt
 RUN eval "$(pyenv init -)" \
     && eval "$(pyenv virtualenv-init -)" \
     && pyenv activate $PYTHON2_VERSION \
-    && conda install --yes --freeze-installed \
+    && conda install --yes --no-update-deps \
         dask==1.2.2 \
         numpy==1.16.3 \
         pandas==0.24.2 \
