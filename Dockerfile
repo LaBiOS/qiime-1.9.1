@@ -7,7 +7,9 @@ ADD bioconductor-file.txt /tools/bioconductor-file.txt
 
 RUN eval "$(pyenv init -)" \
     && eval "$(pyenv virtualenv-init -)" \
-    && pyenv activate $PYTHON2_VERSION \
+    && pyenv virtualenv $PYTHON2_VERSION qiime \
+    && pyenv global qiime \
+    && pyenv activate qiime \
     && conda install --yes --no-update-deps \
         dask==1.2.2 \
         numpy==1.16.3 \
