@@ -13,7 +13,7 @@ apt-transport-https openjdk-7-jdk
 
 # Install Qiime plus dependencies using pip
 # recent version of matplotlib has issues in generating plots with Qiime
-RUN pip install numpy && pip install h5py matplotlib==1.4.3 qiime
+RUN pip install numpy && pip install h5py matplotlib==1.4.3 qiime vsearch
 
 # Install latest R package from CRAN
 RUN echo "deb https://cloud.r-project.org/bin/linux/ubuntu trusty/" | tee -a /etc/apt/sources.list 
