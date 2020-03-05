@@ -38,5 +38,6 @@ RUN cd ~/qiime-deploy && python qiime-deploy.py /opt/qiime_deps/ -f \
 --force-remove-failed-dirs
 
 # create and set user for container
-RUN useradd -m -s /bin/bash qiime
+RUN useradd -m -s /bin/bash qiime \
+    && ln -s $(which vsearch) /bin/usearch61
 USER qiime
