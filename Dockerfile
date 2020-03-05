@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-MAINTAINER Vimalkumar Velayudhan <vimalkumarvelayudhan@gmail.com>
+MAINTAINER Fabiano Menegidio
 
 # Install prerequisite libraries and tools
 RUN apt-get update && apt-get -y install \
