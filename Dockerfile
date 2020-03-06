@@ -6,7 +6,7 @@ USER root
 ADD usearch61 /bin/usearch61
 ADD fasta-splitter.pl /bin/fasta-splitter
 
-RUN apt-get install -y python_requires wget \
+RUN apt-get install -y wget \
     && wget https://support.hdfgroup.org/ftp/HDF5/prev-releases/hdf5-1.10/hdf5-1.10.1/src/hdf5-1.10.1.tar.gz \
     && tar zxf hdf5-1.10.1.tar.gz \
     && mv hdf5-1.10.1 hdf5-setup \
