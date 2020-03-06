@@ -13,9 +13,10 @@ apt-transport-https openjdk-7-jdk
 
 # Install Qiime plus dependencies using pip
 # recent version of matplotlib has issues in generating plots with Qiime
-RUN pip install biom-format==2.1.4 burrito==1.0.0 burrito-fillings==0.1.1 cogent==1.5.3 emperor==0.9.51 gdata \
-mock natsort==4.0.0 nose numpy==1.10 pandas==0.13.1 pynast==1.2.2 qcli==0.1.1 scikit-bio==0.2.3 scipy==0.14.0 \
-&& pip install h5py matplotlib==1.4.3 qiime
+RUN pip install numpy==1.10 scipy==0.14.0 matplotlib==1.4.3 biom-format==2.1.4 pynast==1.2.2 \
+burrito==1.0.0 burrito-fillings==0.1.1 cogent==1.5.3 emperor==0.9.51 gdata \
+mock natsort==4.0.0 nose pandas==0.13.1 qcli==0.1.1 scikit-bio==0.2.3  \
+&& pip install h5py qiime
 # Install latest R package from CRAN
 RUN echo "deb https://cloud.r-project.org/bin/linux/ubuntu trusty/" | tee -a /etc/apt/sources.list 
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9 && \
