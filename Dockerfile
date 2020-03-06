@@ -9,11 +9,14 @@ liblapack-dev libmysqlclient18 libmysqlclient-dev libncurses5-dev libpng12-dev \
 libreadline-dev libsqlite3-dev libssl-dev libxml2 libxslt1.1 libxslt1-dev \
 libzmq-dev mpich2 openjdk-6-jdk pkg-config python-dev python-pip \
 sqlite3 subversion swig tcl-dev tk-dev unzip zlib1g-dev \
-apt-transport-https openjdk-7-jdk
+apt-transport-https openjdk-7-jdk xorg-libsm xorg-libxau xorg-libxdmcp \
+xorg-libxext xorg-libxrender glib libgcc
 
 # Install Qiime plus dependencies using pip
 # recent version of matplotlib has issues in generating plots with Qiime
-RUN pip install scipy=0.14.0 numpy==1.7.1 && pip install h5py matplotlib==1.4.3 qiime
+RUN pip install biom-format==2.1.4 burrito==1.0.0 burrito-fillings==0.1.1 cogent==1.5.3 emperor==0.9.51 gdata \
+mock natsort==4.0.0 nose numpy==1.10 pandas==0.13.1 pynast==1.2.2 qcli==0.1.1 scikit-bio==0.2.3 scipy==0.14.0 \
+&& pip install h5py matplotlib==1.4.3 qiime
 # Install latest R package from CRAN
 RUN echo "deb https://cloud.r-project.org/bin/linux/ubuntu trusty/" | tee -a /etc/apt/sources.list 
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E084DAB9 && \
