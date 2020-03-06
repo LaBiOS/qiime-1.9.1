@@ -13,7 +13,7 @@ apt-transport-https openjdk-7-jdk
 
 # Install Qiime plus dependencies using pip
 # recent version of matplotlib has issues in generating plots with Qiime
-RUN pip install numpy==1.10 scipy==0.14.0 matplotlib==1.4.3 biom-format==2.1.4 pynast==1.2.2 \
+RUN pip install numpy==1.3.0 scipy==0.14.0 matplotlib==1.4.3 biom-format==2.1.4 pynast==1.2.2 \
 burrito==1.0.0 burrito-fillings==0.1.1 cogent==1.5.3 emperor==0.9.51 gdata \
 mock natsort==4.0.0 nose pandas==0.13.1 qcli==0.1.1 scikit-bio==0.2.3  \
 && pip install h5py qiime
